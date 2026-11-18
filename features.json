@@ -1,0 +1,238 @@
+{
+  "ko": [
+    [
+      "능력치부터 히든까지, 원하는 선수로.",
+      "능력치 · 히든 편집",
+      "기술·정신·신체 능력치부터 CA·PA와 숨겨진 성격 능력치까지. 원하는 항목을 직접 수정하며 내가 상상한 선수로 만들어 보세요.",
+      "03_player.png",
+      "능력치와 히든 입력 화면",
+      "player"
+    ],
+    [
+      "이 선수, 얼마면 데려올 수 있을까?",
+      "구매 가능금액",
+      "시장가치와 영입에 필요한 금액은 다릅니다. 판매 구단의 이적료 수락 기준을 바탕으로 계산한 구매 가능금액을 확인하고 영입 예산을 계획하세요. 개인계약 성사 여부는 별도입니다.",
+      "04_contract.png",
+      "계약 탭 오른쪽의 시장가치와 구매 가능금액",
+      "search"
+    ],
+    [
+      "우리 팀에는 어떤 역할이 어울릴까?",
+      "선수 레이팅",
+      "포지션과 역할별 점수로 선수의 강점을 확인하세요. 같은 선수도 역할에 따라 달라지는 레이팅을 살펴보고 활용할 자리를 찾아보세요.",
+      "05_rating.png",
+      "포지션 지도와 역할별 레이팅",
+      "player"
+    ],
+    [
+      "지금의 실력, 앞으로의 가능성.",
+      "성장 레이팅 비교",
+      "현재 레이팅과 성장 레이팅을 나란히 비교하세요. 즉시 전력감과 시간을 들여 키울 유망주를 구분하고 영입의 기준을 넓혀보세요.",
+      "10_club_detail.png",
+      "선수단 표 오른쪽의 레이팅·성장 레이팅 비교",
+      "player"
+    ],
+    [
+      "잠재력의 끝에서는 어떤 선수가 될까?",
+      "선수 성장",
+      "게임 엔진에서 확인한 성장 계산을 바탕으로 단계별 성장과 풀 포텐셜을 적용해 보세요. 주력·근력·스태미나는 모델 기반 근사 계산을 사용합니다.",
+      "02_bulk.png",
+      "Growth의 +5·+10·+20·Full potential 빠른 버튼",
+      "player"
+    ],
+    [
+      "아직 보내기 아쉽다면, 한 시즌 더.",
+      "은퇴 발표 · 취소",
+      "은퇴 일정을 확인하고 은퇴를 취소하거나 발표를 설정하세요. 선수의 마지막 이야기를 직접 바꿔볼 수 있습니다.",
+      "06_status.png",
+      "상태 탭 오른쪽 Retirement 영역",
+      "player"
+    ],
+    [
+      "한 명씩 말고, 선수단을 한 번에!",
+      "선수 다중 수정",
+      "현재 검색 결과나 관심선수 명단을 대상으로 여러 항목을 함께 수정하세요. 숫자 증감과 하한·상한을 지정하고 적용 전 선수별 결과를 미리 확인할 수 있습니다.",
+      "02_bulk.png",
+      "대상·빠른 버튼·항목 추가·미리보기가 모인 다중 수정 창",
+      "search"
+    ],
+    [
+      "부상과 컨디션도 한 번에 정리.",
+      "회복 · 상태 관리",
+      "부상을 해소하고 컨디션과 사기를 회복하세요. 한 선수의 상태를 직접 확인하거나 다중 수정의 회복 버튼으로 여러 선수를 함께 관리할 수 있습니다.",
+      "06_status.png",
+      "Fitness & morale와 부상·불만·은퇴 상태",
+      "player"
+    ],
+    [
+      "꿈꾸던 선수를 우리 팀으로.",
+      "선수 영입 · 이적",
+      "영입·이적·방출로 원하는 선수단을 구성하세요. 구단 이적 탭에서 선수를 고르고 소속을 바꾸며 새로운 조합을 만들어보세요.",
+      "12_transfers.png",
+      "구단 Transfers 탭의 선수 선택 화면",
+      "transfers"
+    ],
+    [
+      "우리 팀만의 제휴 네트워크.",
+      "제휴구단 설정",
+      "제휴구단을 추가하고 관계가 유지되는 기간을 설정하세요. 라이벌 관계도 함께 관리하며 구단 사이의 연결을 바꿀 수 있습니다.",
+      "11_affiliates.png",
+      "제휴구단·기간·라이벌 구단을 관리하는 Relations 탭",
+      "clubs"
+    ],
+    [
+      "우리 팀이 다른 리그에서 뛴다면?",
+      "구단 리그 스왑",
+      "다른 리그의 두 구단을 맞바꾸거나 여러 구단의 리그를 순환 이동하세요. 현재 시즌을 마치고 다음 시즌부터 새로운 리그에서 도전할 수 있습니다.",
+      "09_swap.png",
+      "Swap·Rotation을 선택하는 구단 교환 창",
+      "clubs"
+    ],
+    [
+      "은퇴한 그 선수, 다시 만날 수 있을까?",
+      "환생 선수 찾기",
+      "새로운 선수들 사이에서 과거 선수의 흔적을 찾아보세요. 환생 정보와 원본 선수 추정 결과를 확인하며 다음 세대의 주인공을 찾아볼 수 있습니다.",
+      "14_filter.png",
+      "관련 검색·필터 화면 예시 — 환생 결과 화면은 추후 추가",
+      "regens"
+    ],
+    [
+      "마음에 든 선수는 별표로 모아두세요.",
+      "관심선수 명단",
+      "선수 옆 별표로 영입 후보를 모아두세요. 명단 안에서도 검색·필터·정렬하고, 표시할 열을 바꿔 나만의 선수 비교표를 만들 수 있습니다.",
+      "01_players.png",
+      "선수 이름 옆 별표와 상단 My shortlist 버튼",
+      "search"
+    ],
+    [
+      "얼굴부터 유니폼까지, 내 취향대로.",
+      "그래픽 패치",
+      "원하는 선수 페이스팩과 구단·대회 로고, 유니폼을 등록·교체·삭제하세요. 게임 그래픽 파일 접근에는 Shizuku 연결이 필요합니다.",
+      "13_graphics.png",
+      "실제 유니폼 이미지와 파일 정보를 보여주는 그래픽 화면",
+      "graphics"
+    ],
+    [
+      "낯선 이름도 한글로 편하게.",
+      "인물 이름 한글화",
+      "선수·스탭·감독 등의 통칭을 한 번에 한글로 바꾸세요. 적용 이력이 남아 있다면 원래 통칭으로 되돌릴 수도 있습니다.",
+      "15_localized_english.png",
+      "영어 UI에서 확인한 한글 인물 이름 — 한글화 적용 상태",
+      "settings"
+    ]
+  ],
+  "en": [
+    [
+      "Edit the player you imagined.",
+      "Attributes & hidden values",
+      "Edit technical, mental and physical attributes, CA, PA and hidden personality values. Shape the details that make each player unique.",
+      "03_player.png",
+      "Attribute and hidden-value inputs",
+      "player"
+    ],
+    [
+      "What would it take to sign them?",
+      "Purchase price",
+      "Explore the purchase amount calculated from the selling club’s fee acceptance criteria. Plan beyond the displayed market value. Personal contract agreement is a separate step.",
+      "04_contract.png",
+      "Market value and purchase price on the Contract tab",
+      "search"
+    ],
+    [
+      "Find the role that fits.",
+      "Player ratings",
+      "Explore position and role ratings to discover a player’s strengths and where to use them.",
+      "05_rating.png",
+      "Position map and role ratings",
+      "player"
+    ],
+    [
+      "Today’s talent. Tomorrow’s potential.",
+      "Growth ratings",
+      "Compare current and growth ratings side by side to distinguish immediate impact from long-term potential.",
+      "10_club_detail.png",
+      "Current and growth rating columns in the squad table",
+      "player"
+    ],
+    [
+      "See their potential take shape.",
+      "Player growth",
+      "Apply step-by-step growth or full potential using growth calculations studied from the game engine. Pace, strength and stamina use model-based approximations.",
+      "02_bulk.png",
+      "Growth quick buttons in the Bulk edit dialog",
+      "player"
+    ],
+    [
+      "One more season?",
+      "Retirement announcements & cancellation",
+      "Review retirement schedules, cancel retirement or set an announcement to change the final chapter of a player’s career.",
+      "06_status.png",
+      "Retirement area on the Status tab",
+      "player"
+    ],
+    [
+      "Your whole squad. One edit.",
+      "Bulk player editing",
+      "Edit multiple fields across search results or a shortlist. Adjust values, set lower and upper limits, and preview each player’s changes before applying.",
+      "02_bulk.png",
+      "Bulk edit targets, quick buttons and preview",
+      "search"
+    ],
+    [
+      "Back to their best.",
+      "Recovery & condition",
+      "Clear injuries and restore condition and morale. Review one player or use recovery quick buttons for several players.",
+      "06_status.png",
+      "Fitness, morale and player status",
+      "player"
+    ],
+    [
+      "Bring your dream squad together.",
+      "Player transfers",
+      "Recruit, transfer or release players. Select players from the club transfer tab and reshape your squad.",
+      "12_transfers.png",
+      "Player selection on the Transfers tab",
+      "transfers"
+    ],
+    [
+      "Build your club’s network.",
+      "Affiliated clubs",
+      "Add affiliated clubs, set relationship dates, and manage rival clubs.",
+      "11_affiliates.png",
+      "Affiliated and rival clubs on the Relations tab",
+      "clubs"
+    ],
+    [
+      "A different league. A new challenge.",
+      "Club league swaps",
+      "Swap league places between two clubs or rotate several clubs. The new league takes effect next season after the current season ends.",
+      "09_swap.png",
+      "Swap and Rotation modes",
+      "clubs"
+    ],
+    [
+      "Could you meet that player again?",
+      "Find regenerated players",
+      "Explore regeneration information and estimated original-player matches to discover the next generation.",
+      "14_filter.png",
+      "Related search and filter screen; regeneration results will be added later",
+      "regens"
+    ],
+    [
+      "Keep the players you love in view.",
+      "Shortlists",
+      "Star players to build a shortlist. Search, filter, sort and customize columns to compare your candidates.",
+      "01_players.png",
+      "Star controls and My shortlist button",
+      "search"
+    ],
+    [
+      "Make your football world look yours.",
+      "Graphics patches",
+      "Register, replace or delete player faces, club and competition logos, and kits. Access to game graphics requires Shizuku.",
+      "13_graphics.png",
+      "Kit graphics and file information",
+      "graphics"
+    ]
+  ]
+}
