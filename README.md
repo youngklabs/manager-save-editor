@@ -9,3 +9,5 @@ The site is generated from `build_pages.py`. Korean and English content is maint
 - This repository is public. Do not add app source code, save files, private screenshots or credentials.
 
 Homepage feature copy, captions and screenshot mappings are maintained in features.json (15 Korean entries, 14 English entries). Screenshot originals are in assets/screens. Run python build_pages.py after editing content.
+
+Screenshot emphasis uses annotations.json (2280x1080 pixel coordinates). build_pages.py generates inline SVG pencil circles; the image viewer preserves these overlays.

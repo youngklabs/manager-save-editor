@@ -36,8 +36,8 @@
       "잠재력의 끝에서는 어떤 선수가 될까?",
       "선수 성장",
       "게임 엔진에서 확인한 성장 계산을 바탕으로 단계별 성장과 풀 포텐셜을 적용해 보세요. 주력·근력·스태미나는 모델 기반 근사 계산을 사용합니다.",
-      "02_bulk.png",
-      "Growth의 +5·+10·+20·Full potential 빠른 버튼",
+      "16_growth.png",
+      "선수 능력 탭의 ENGINE GROWTH 버튼",
       "player"
     ],
     [
@@ -60,8 +60,8 @@
       "부상과 컨디션도 한 번에 정리.",
       "회복 · 상태 관리",
       "부상을 해소하고 컨디션과 사기를 회복하세요. 한 선수의 상태를 직접 확인하거나 다중 수정의 회복 버튼으로 여러 선수를 함께 관리할 수 있습니다.",
-      "06_status.png",
-      "Fitness & morale와 부상·불만·은퇴 상태",
+      "17_injury.png",
+      "컨디션·사기와 INJURY 영역",
       "player"
     ],
     [
@@ -92,8 +92,8 @@
       "은퇴한 그 선수, 다시 만날 수 있을까?",
       "환생 선수 찾기",
       "새로운 선수들 사이에서 과거 선수의 흔적을 찾아보세요. 환생 정보와 원본 선수 추정 결과를 확인하며 다음 세대의 주인공을 찾아볼 수 있습니다.",
-      "14_filter.png",
-      "관련 검색·필터 화면 예시 — 환생 결과 화면은 추후 추가",
+      "19_regen.png",
+      "선수 이름 옆 환생 원본: James Milner",
       "regens"
     ],
     [
@@ -101,15 +101,15 @@
       "관심선수 명단",
       "선수 옆 별표로 영입 후보를 모아두세요. 명단 안에서도 검색·필터·정렬하고, 표시할 열을 바꿔 나만의 선수 비교표를 만들 수 있습니다.",
       "01_players.png",
-      "선수 이름 옆 별표와 상단 My shortlist 버튼",
+      "상단 My shortlist와 Import shortlist 버튼",
       "search"
     ],
     [
       "얼굴부터 유니폼까지, 내 취향대로.",
       "그래픽 패치",
       "원하는 선수 페이스팩과 구단·대회 로고, 유니폼을 등록·교체·삭제하세요. 게임 그래픽 파일 접근에는 Shizuku 연결이 필요합니다.",
-      "13_graphics.png",
-      "실제 유니폼 이미지와 파일 정보를 보여주는 그래픽 화면",
+      "18_face.png",
+      "선수 개인정보의 얼굴 이미지와 Edit 버튼",
       "graphics"
     ],
     [
@@ -158,8 +158,8 @@
       "See their potential take shape.",
       "Player growth",
       "Apply step-by-step growth or full potential using growth calculations studied from the game engine. Pace, strength and stamina use model-based approximations.",
-      "02_bulk.png",
-      "Growth quick buttons in the Bulk edit dialog",
+      "16_growth.png",
+      "ENGINE GROWTH buttons on the player Attributes tab",
       "player"
     ],
     [
@@ -182,8 +182,8 @@
       "Back to their best.",
       "Recovery & condition",
       "Clear injuries and restore condition and morale. Review one player or use recovery quick buttons for several players.",
-      "06_status.png",
-      "Fitness, morale and player status",
+      "17_injury.png",
+      "Condition, morale and INJURY fields",
       "player"
     ],
     [
@@ -214,8 +214,8 @@
       "Could you meet that player again?",
       "Find regenerated players",
       "Explore regeneration information and estimated original-player matches to discover the next generation.",
-      "14_filter.png",
-      "Related search and filter screen; regeneration results will be added later",
+      "19_regen.png",
+      "Regen origin: James Milner, beside the player name",
       "regens"
     ],
     [
@@ -223,15 +223,15 @@
       "Shortlists",
       "Star players to build a shortlist. Search, filter, sort and customize columns to compare your candidates.",
       "01_players.png",
-      "Star controls and My shortlist button",
+      "My shortlist and Import shortlist buttons",
       "search"
     ],
     [
       "Make your football world look yours.",
       "Graphics patches",
       "Register, replace or delete player faces, club and competition logos, and kits. Access to game graphics requires Shizuku.",
-      "13_graphics.png",
-      "Kit graphics and file information",
+      "18_face.png",
+      "Player face and Edit button on the Personal tab",
       "graphics"
     ]
   ]
