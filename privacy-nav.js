@@ -1,0 +1,1 @@
+const button=document.querySelector('.privacy-menu');const nav=document.querySelector('#privacy-nav');button.addEventListener('click',()=>{const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(open))});
