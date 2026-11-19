@@ -28,7 +28,9 @@ body { background:var(--paper); color:var(--ink); font-family:Paperlogy, system-
 a:focus-visible,button:focus-visible { outline:2px solid var(--lime); outline-offset:4px; }
 .night-hero { background:radial-gradient(ellipse at 100% 10%,#21465a 0,transparent 68%),var(--paper); border-bottom:1px solid var(--line); }
 .night-hero .hero-inner { grid-template-columns:minmax(0,.92fr) minmax(0,1.35fr); padding-block:clamp(52px,7vw,104px); gap:clamp(24px,4vw,58px); }
-.night-hero h1 { font-size:clamp(2.5rem,5.6vw,5.25rem); margin-block:16px 20px; }
+.night-hero h1 { font-size:clamp(2.25rem,4.4vw,4.25rem); line-height:1.18; margin-block:16px 20px; word-break:keep-all; overflow-wrap:break-word; text-wrap:balance; }
+.night-hero .lead { word-break:keep-all; }
+.header nav a { white-space:nowrap; }
 .night-hero h1 em,.night-hero .kicker { color:var(--lime); }
 .night-hero .kicker { font-size:.82rem; }
 .night-hero .lead { color:var(--muted); }
@@ -78,8 +80,16 @@ footer p,footer>small { color:var(--muted); }
 .image-viewer::backdrop { background:#070e17ed; }
 @media(max-width:900px) {
   .header nav,.privacy-header nav { background:var(--panel); }
-  .night-hero .hero-inner { grid-template-columns:1fr; }
+  .night-hero .hero-inner { grid-template-columns:minmax(0,1fr); }
+  .night-hero .hero-inner > * { min-width:0; }
   .wiki-nav a { background:#10202f; }
+}
+/* Header menu switches to the hamburger earlier, so the 4 nav links + language button never overflow. */
+@media(max-width:1100px) {
+  .header nav,.privacy-header nav { display:none; position:absolute; top:76px; left:0; right:0; background:var(--panel); padding:20px 5%; box-shadow:0 14px 20px #0008; flex-direction:column; align-items:stretch; }
+  .header nav.open,.privacy-header nav.open { display:flex; }
+  .controls { margin-left:auto; }
+  .menu { display:block; }
 }
 @media(max-width:650px) {
   .scout-console { grid-template-columns:minmax(0,1fr); }
