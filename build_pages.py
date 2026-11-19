@@ -9,7 +9,7 @@ T={
 ids=['getting-started','save','search','player','regens','transfers','clubs','world','graphics','settings']
 def page(lang,section,content):
  t=T[lang];other='en' if lang=='ko' else 'ko'; paths=['index.html','guide.html','updates.html','../privacy/'+lang+'.html']; nav=''.join(f'<a {"aria-current=page" if i==section else ""} href="{p}">{escape(x)}</a>' for i,(x,p) in enumerate(zip(t['nav'],paths)))
- return f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0d2420"><title>{escape(t['nav'][section])} | Manager Save Editor</title><link rel="icon" href="../assets/icon.png"><link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="../pages.css"><script src="../pages.js" defer></script></head><body><header class="header"><a class="brand" href="index.html"><img src="../assets/icon.png" alt=""><span>MSE <small>MANAGER SAVE EDITOR</small></span></a><nav id="nav" aria-label="Navigation">{nav}</nav><div class="controls"><a class="language" href="../{other}/{['index.html','guide.html','updates.html'][section]}" aria-label="{'Switch to English' if lang=='ko' else '한국어로 변경'}">{'EN' if lang=='ko' else '한국어'} ↗</a><button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="{'메뉴' if lang=='ko' else 'Menu'}"><span></span><span></span></button></div></header>{content}<footer><a class="brand" href="index.html"><img src="../assets/icon.png" alt=""><span>MSE <small>MANAGER SAVE EDITOR</small></span></a><p>{t['footer']}</p><div><a href="../privacy/{lang}.html">{t['nav'][3]}</a><a href="mailto:young.k.labs@gmail.com">{t['contact']}: young.k.labs@gmail.com</a></div><small>© MANAGER SAVE EDITOR</small></footer></body></html>'''
+ return f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0d1824"><title>{escape(t['nav'][section])} | Manager Save Editor</title><link rel="icon" href="../assets/icon.png"><link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="../pages.css"><link rel="stylesheet" href="../night.css"><script src="../pages.js?v=night" defer></script></head><body><header class="header"><a class="brand" href="index.html"><img src="../assets/icon.png" alt=""><span>MSE <small>MANAGER SAVE EDITOR</small></span></a><nav id="nav" aria-label="Navigation">{nav}</nav><div class="controls"><a class="language" href="../{other}/{['index.html','guide.html','updates.html'][section]}" aria-label="{'Switch to English' if lang=='ko' else '한국어로 변경'}">{'EN' if lang=='ko' else '한국어'}</a><button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="{'메뉴' if lang=='ko' else 'Menu'}"><span></span><span></span></button></div></header>{content}<footer><a class="brand" href="index.html"><img src="../assets/icon.png" alt=""><span>MSE <small>MANAGER SAVE EDITOR</small></span></a><p>{t['footer']}</p><div><a href="../privacy/{lang}.html">{t['nav'][3]}</a><a href="mailto:young.k.labs@gmail.com">{t['contact']}: young.k.labs@gmail.com</a></div><small>© MANAGER SAVE EDITOR</small></footer></body></html>'''
 def annotation(number):
  marks=json.loads((root/'annotations.json').read_text(encoding='utf-8')).get(str(number),[])
  if not marks:return ''
@@ -30,12 +30,51 @@ for lang,t in T.items():
  stories=json.loads((root/'features.json').read_text(encoding='utf-8'))[lang]
  features=''.join(f'''<article class="discovery feature-story" id="feature-{i+1}"><div class="discovery-copy"><p class="discovery-kicker">{escape(name)}</p><h3>{escape(headline)}</h3><p>{escape(description)}</p><a href="guide.html#{anchor}">{'관련 사용법' if lang=='ko' else 'Related guide'}</a></div><figure class="real-screen"><a href="../assets/screens/{filename}" class="screenshot-link"><img src="../assets/screens/{filename}" alt="{escape(caption)}" loading="lazy" width="2280" height="1080">{annotation(i+1)}</a><figcaption>{escape(caption)}<span>{'눌러서 크게 보기' if lang=='ko' else 'Select to enlarge'}</span></figcaption></figure></article>''' for i,(headline,name,description,filename,caption,anchor) in enumerate(stories))
 
- home=f'''<main><section class="hero"><div class="hero-grid"></div><div class="hero-inner"><div class="hero-copy"><p class="kicker"><span class="dot"></span> MANAGER SAVE EDITOR · {t['label']}</p><h1>{t['title']}</h1><p class="lead">{t['lead']}</p><div class="actions"><a class="button primary" href="guide.html">{t['guide']} ↗</a><span class="button ghost disabled" aria-disabled="true">{t['download']}</span></div><div class="hero-meta"><span>FOOTBALL MANAGER MOBILE 2027</span></div></div><div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-label">YOUR SAVE<br><strong>YOUR RULES.</strong></div><div class="screen-frame"><div class="frame-bar"><span></span><span></span><span></span><b>MANAGER SAVE EDITOR</b></div><img src="../assets/screens/03_player.png" alt="{'MSE 선수 검색 예시 화면' if lang=='ko' else 'Example MSE player search screen'}"></div><div class="floating-note"><span>✦</span><div><b>MAKE IT YOURS</b><small>{'예시 화면' if lang=='ko' else 'Example screen'}</small></div></div></div></div></section><section class="section"><div class="section-heading"><div><p class="eyebrow">01 / FEATURES</p><h2>{t['features']}</h2></div><p>{t['features_sub']}</p></div><div class="discovery-list">{features}</div></section><section class="download-section"><div class="section download-inner"><div><p class="eyebrow">02 / DOWNLOAD</p><h2>{'새로운 이야기를<br><em>시작할 준비.</em>' if lang=='ko' else 'Ready for your<br><em>next story?</em>'}</h2><p>{'스토어 출시 후 다운로드 링크와 QR 코드가 이곳에 표시됩니다.' if lang=='ko' else 'The download link and QR code will appear here once the app is available.'}</p><span class="button primary disabled" aria-disabled="true">{t['download']}</span></div><div class="qr-placeholder"><span>▦</span><small>{t['qr']}</small></div></div></section></main>'''
+ groups = [
+  ('스카우팅', 'Scouting', [2, 3, 4, 12, 13]),
+  ('선수 편집', 'Player editing', [1, 5, 6, 7, 8]),
+  ('구단 운영', 'Club management', [9, 10, 11]),
+  ('그래픽·한글화', 'Graphics', [14, 15]),
+ ]
+ feature_nav = ''.join(
+  f'<div class="feature-group"><h3>{ko if lang == "ko" else en}</h3>'
+  + ''.join(f'<a href="#feature-{n}">{escape(stories[n-1][1])}</a>' for n in numbers if n <= len(stories))
+  + '</div>' for ko, en, numbers in groups
+ )
+ title = '다음 영입을<br><em>준비할 시간.</em>' if lang == 'ko' else 'Plan your<br><em>next signing.</em>'
+ arena = '스카우팅 도구 보기' if lang == 'ko' else 'Explore the tools'
+ download_title = 'Google Play에서 만나보세요' if lang == 'ko' else 'Coming to Google Play'
+ home=f'''<main>
+ <section class="hero night-hero">
+  <div class="hero-inner">
+   <div class="hero-copy">
+    <p class="kicker">FOOTBALL MANAGER MOBILE 2027</p>
+    <h1>{title}</h1><p class="lead">{t['lead']}</p>
+    <div class="actions"><a class="button primary" href="#features">{arena}</a><a class="button ghost" href="guide.html">{t['guide']}</a></div>
+   </div>
+   <figure class="hero-shot">
+    <a class="screenshot-link" href="../assets/screens/05_rating.png"><img src="../assets/screens/05_rating.png" width="2280" height="1080" fetchpriority="high" alt="{'선수 프로필과 포지션별 레이팅' if lang=='ko' else 'Player profile and position ratings'}"></a>
+    <figcaption>{'선수 프로필과 포지션별 레이팅' if lang=='ko' else 'Player profile and position ratings'}</figcaption>
+   </figure>
+  </div>
+ </section>
+ <section class="section scout-section" id="features">
+  <div class="section-heading"><h2>{'주요 기능' if lang=='ko' else 'Features'}</h2></div>
+  <div class="scout-console">
+   <nav class="scout-nav" aria-label="{'기능 선택' if lang=='ko' else 'Choose a feature'}">{feature_nav}</nav>
+   <div class="discovery-list scout-reports">{features}</div>
+  </div>
+ </section>
+ <section class="download-section">
+  <div class="section download-inner"><div><h2>{download_title}</h2><p>{'출시 후 다운로드 링크와 QR 코드를 이곳에서 확인할 수 있습니다.' if lang=='ko' else 'The download link and QR code will appear here once the app is available.'}</p><span class="button ghost disabled" aria-disabled="true">{t['download']}</span></div><div class="qr-placeholder">{t['qr']}</div></div>
+ </section>
+ </main>'''
+
  (d/'index.html').write_text(page(lang,0,home),encoding='utf-8')
  nav=''.join(f'<a href="#{id}">{escape(name)}</a>' for id,name in zip(ids,t['topics']))
- articles=''.join(f'<article id="{id}" class="wiki-article"><span class="number-label">GUIDE / {i+1:02}</span><h2>{escape(name)}</h2><p>{t["draft"]}</p>{f"<div class=\"warning\"><strong>{t['backup']}</strong></div>" if i==1 else ""}<div class="wiki-placeholder"><span>▧</span><small>{t["placeholder"]}</small></div></article>' for i,(id,name) in enumerate(zip(ids,t['topics'])))
- guide=f'''<main class="wiki-wrap"><div class="wiki-top"><p class="eyebrow">MSE / USER GUIDE</p><h1>{t['wiki_title']}</h1><p>{t['wiki_sub']}</p></div><div class="wiki-layout"><aside class="wiki-nav"><strong>{t['select']}</strong><nav aria-label="{t['select']}">{nav}</nav></aside><div class="wiki-content">{articles}</div></div></main>'''
+ articles=''.join(f'<article id="{id}" class="wiki-article"><h2>{escape(name)}</h2><p>{t["draft"]}</p>{f"<div class=\"warning\"><strong>{t['backup']}</strong></div>" if i==1 else ""}<div class="wiki-placeholder"><span>▧</span><small>{t["placeholder"]}</small></div></article>' for i,(id,name) in enumerate(zip(ids,t['topics'])))
+ guide=f'''<main class="wiki-wrap"><div class="wiki-top"><h1>{t['wiki_title']}</h1><p>{t['wiki_sub']}</p></div><div class="wiki-layout"><aside class="wiki-nav"><strong>{t['select']}</strong><nav aria-label="{t['select']}">{nav}</nav></aside><div class="wiki-content">{articles}</div></div></main>'''
  (d/'guide.html').write_text(page(lang,1,guide),encoding='utf-8')
- updates=f'''<main class="updates-wrap"><p class="eyebrow">MSE / RELEASE NOTES</p><h1>{t['updates']}</h1><p class="updates-lead">{t['updates_sub']}</p><div class="empty-state"><span>✳</span><h2>{t['empty']}</h2><p>{t['emptydesc']}</p></div></main>'''
+ updates=f'''<main class="updates-wrap"><h1>{t['updates']}</h1><p class="updates-lead">{t['updates_sub']}</p><div class="empty-state"><h2>{t['empty']}</h2><p>{t['emptydesc']}</p></div></main>'''
  (d/'updates.html').write_text(page(lang,2,updates),encoding='utf-8')
 (root/'index.html').write_text('''<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Manager Save Editor</title><script>const lang=new URLSearchParams(location.search).get('lang');location.replace((lang==='ko'||lang==='en'?lang:(navigator.language.toLowerCase().startsWith('ko')?'ko':'en'))+'/index.html')</script></head><body><a href="ko/index.html">한국어</a> · <a href="en/index.html">English</a></body></html>''',encoding='utf-8')
