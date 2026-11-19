@@ -41,15 +41,16 @@ for lang,t in T.items():
   + ''.join(f'<a href="#feature-{n}">{escape(stories[n-1][1])}</a>' for n in numbers if n <= len(stories))
   + '</div>' for ko, en, numbers in groups
  )
- title = '다음 영입을<br><em>준비할 시간.</em>' if lang == 'ko' else 'Plan your<br><em>next signing.</em>'
- arena = '스카우팅 도구 보기' if lang == 'ko' else 'Explore the tools'
+ title = '나만의 축구 세계를<br><em>만들어보세요.</em>' if lang == 'ko' else 'Create your own<br><em>football world.</em>'
+ arena = '주요 기능 살펴보기' if lang == 'ko' else 'Explore features'
+ lead = '선수를 찾고, 팀을 바꾸고, 새로운 이야기를 시작하세요.' if lang == 'ko' else 'Find players, change your team, and start a new story.'
  download_title = 'Google Play에서 만나보세요' if lang == 'ko' else 'Coming to Google Play'
  home=f'''<main>
  <section class="hero night-hero">
   <div class="hero-inner">
    <div class="hero-copy">
     <p class="kicker">FOOTBALL MANAGER MOBILE 2027</p>
-    <h1>{title}</h1><p class="lead">{t['lead']}</p>
+    <h1>{title}</h1><p class="lead">{lead}</p>
     <div class="actions"><a class="button primary" href="#features">{arena}</a><a class="button ghost" href="guide.html">{t['guide']}</a></div>
    </div>
    <figure class="hero-shot">
