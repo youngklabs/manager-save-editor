@@ -98,3 +98,5 @@ footer p,footer>small { color:var(--muted); }
   .scout-reports .feature-story[hidden] { display:block !important; }
   .scout-reports .feature-story + .feature-story { margin-top:36px; padding-top:36px; border-top:1px solid var(--line); border-radius:0; }
 }
+
+.release{background:var(--panel);border-color:var(--line);color:var(--ink)}.release p,.release time{color:var(--muted)}
